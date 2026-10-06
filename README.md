@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization?style=social" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Automated-Data-Transfer-Synchronization?color=blue" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -18,7 +18,7 @@
 
 Welcome to the definitive curated index of **automated data transfer solutions**, **enterprise data migration platforms**, **real-time database replication engines**, and **open-source file synchronization utilities**. 💡
 
-This repository provides comprehensive benchmark details, commercial pricing models, free tier/trial boundaries, enterprise valuation metrics, and open-source star counts for software engineers, cloud architects, IT infrastructure administrators, and data engineering teams. 📊
+This repository provides comprehensive benchmark details, commercial pricing models, free tier/trial boundaries, enterprise valuation metrics, and open-source Stars_Counts for software engineers, cloud architects, IT infrastructure administrators, and data engineering teams. 📊
 
 **Key Coverage Categories:**
 - ☁️ **Cloud Migration & Hybrid Storage Sync**: AWS DataSync, Azure Data Factory, Google Transfer Appliance, Rclone, Chorus.
@@ -64,7 +64,7 @@ This repository provides comprehensive benchmark details, commercial pricing mod
 
 ## 🔓 Open-Source GitHub Projects 🛠️
 
-*Sorted by GitHub Stars Count (Descending)* 🌟
+*Sorted by GitHub_Stars_Count (Descending)* 🌟
 
 - **[Syncthing](https://github.com/syncthing/syncthing)** [![Stars](https://img.shields.io/github/stars/syncthing/syncthing?style=social&color=white)](https://github.com/syncthing/syncthing/stargazers)  
   **Continuous peer-to-peer file synchronization**, MPL-2.0 licensed. Decentralized, secure continuous file sync tool that replaces proprietary cloud sync services. Encrypted in transit with TLS, automatic device discovery, and zero central server dependency. Runs on Linux, macOS, Windows, Android, and BSD.  📂
