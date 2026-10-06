@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Filters for Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    /* CSS Animations for Dynamic Background Aspects */
+    @keyframes pulseParticle {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.4; }
+      50% { transform: scale(1.3) translate(10px, -15px); opacity: 0.9; }
+    }
+
+    @keyframes dashStream {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .particle { animation: pulseParticle 6s ease-in-out infinite; }
+    .particle-delayed { animation: pulseParticle 8s ease-in-out 2s infinite; }
+    .data-line { stroke-dasharray: 12, 12; animation: dashStream 3s linear infinite; }
+    .rotating-hub { transform-origin: 1050px 200px; animation: rotateRing 20s linear infinite; }
+    .floating-badge { animation: floatCard 4s ease-in-out infinite; }
+    .floating-badge-2 { animation: floatCard 5s ease-in-out 1.5s infinite; }
+  </style>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <!-- Background Dynamic Visual Graphic Elements (Right side & Low Opacity Background) -->
+  <g opacity="0.35">
+    <circle cx="950" cy="120" r="160" fill="none" stroke="url(#cyanPurple)" stroke-width="1.5" stroke-dasharray="6,6"/>
+    <circle cx="950" cy="120" r="220" fill="none" stroke="#38bdf8" stroke-width="0.5"/>
+  </g>
+
+  <!-- Animated Data Flow Tubes (Background) -->
+  <g opacity="0.4" stroke-width="2">
+    <path d="M 150 350 Q 400 320 600 370 T 1100 320" fill="none" stroke="#06b6d4" class="data-line"/>
+    <path d="M 50 80 Q 300 40 700 80 T 1150 50" fill="none" stroke="#8b5cf6" class="data-line"/>
+  </g>
+
+  <!-- Dynamic Animated Floating Cards (Positioned safely away from center title) -->
+  <g class="floating-badge" opacity="0.75" transform="translate(860, 50)">
+    <rect width="240" height="64" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="32" cy="32" r="16" fill="#0369a1"/>
+    <path d="M 26 32 L 38 32 M 34 26 L 38 32 L 34 38" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="60" y="28" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Cloud Sync Active</text>
+    <text x="60" y="46" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">10 Gbps High-Speed Transfer</text>
+  </g>
+
+  <g class="floating-badge-2" opacity="0.75" transform="translate(890, 270)">
+    <rect width="220" height="64" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1"/>
+    <circle cx="32" cy="32" r="16" fill="#6b21a8"/>
+    <path d="M 26 28 L 32 34 L 38 28 M 32 34 L 32 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <text x="60" y="28" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">DB Replication</text>
+    <text x="60" y="46" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Zero Downtime Mirroring</text>
+  </g>
+
+  <!-- Foreground Main Content: Title & Subtitle (Guaranteed high visibility and contrast) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 75)">
+      <rect width="360" height="32" rx="16" fill="url(#cyanPurple)" opacity="0.2"/>
+      <rect width="360" height="32" rx="16" fill="none" stroke="url(#cyanPurple)" stroke-width="1"/>
+      <text x="180" y="21" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">AWESOME DATA MOVEMENT DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="165" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Automated Data Transfer
+    </text>
+    <text x="0" y="220" fill="url(#cyanPurple)" filter="url(#glow)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.5">
+      &amp; Synchronization Ecosystem
+    </text>
+
+    <!-- Subtitle / Key Focus Pills -->
+    <text x="0" y="272" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="400">
+      Enterprise Cloud Migration • High-Speed File Transfer • Open-Source DB Sync
+    </text>
+
+    <!-- Protocol / Feature Badges Bar -->
+    <g transform="translate(0, 305)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="6" fill="#1e293b" stroke="#334155"/>
+      <text x="65" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">⚡ High-Speed</text>
+
+      <!-- Badge 2 -->
+      <rect x="140" y="0" width="130" height="30" rx="6" fill="#1e293b" stroke="#334155"/>
+      <text x="205" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">☁️ Multi-Cloud</text>
+
+      <!-- Badge 3 -->
+      <rect x="280" y="0" width="140" height="30" rx="6" fill="#1e293b" stroke="#334155"/>
+      <text x="350" y="19" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔒 Peer-to-Peer</text>
+    </g>
+  </g>
+</svg>
